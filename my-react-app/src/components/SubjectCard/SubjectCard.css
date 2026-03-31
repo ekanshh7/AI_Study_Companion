@@ -1,0 +1,225 @@
+.subject-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--code-bg);
+  overflow: hidden;
+}
+
+.subject-card__accent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  border-radius: 12px 0 0 12px;
+}
+
+.subject-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 1rem 1rem 1rem 1.25rem;
+  margin: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+  color: inherit;
+  transition: background 0.15s ease;
+}
+
+.subject-card__header:hover {
+  background: var(--social-bg);
+}
+
+.subject-card__header:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.subject-card__heading {
+  flex: 1;
+  min-width: 0;
+}
+
+.subject-card__title {
+  margin: 0 0 0.35rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.subject-card__description {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--text);
+}
+
+.subject-card__meta {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.subject-card__chevron {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  color: var(--text-h);
+  opacity: 0.85;
+}
+
+.subject-card__chevron svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.subject-card__panel-inner {
+  padding: 0 1rem 1rem 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+.subject-card__empty {
+  margin: 0;
+  padding: 0.75rem 0;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.subject-card__topic-list {
+  list-style: none;
+  margin: 0;
+  padding: 0.75rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.subject-card__topic {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.65rem 0.75rem;
+  border-radius: 8px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+}
+
+.subject-card__topic-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.subject-card__topic-name {
+  display: block;
+  font-weight: 600;
+  color: var(--text-h);
+  margin-bottom: 0.35rem;
+}
+
+.subject-card__topic-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0.35rem;
+}
+
+.subject-card__tag {
+  display: inline-block;
+  padding: 0.15rem 0.45rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  background: var(--accent-bg);
+  color: var(--text-h);
+}
+
+.subject-card__tag--muted {
+  background: var(--social-bg);
+  text-transform: lowercase;
+}
+
+.subject-card__topic-notes {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: var(--text);
+}
+
+.subject-card__topic-delete {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.subject-card__topic-delete:hover {
+  background: rgba(239, 68, 68, 0.12);
+  color: #b91c1c;
+}
+
+@media (prefers-color-scheme: dark) {
+  .subject-card__topic-delete:hover {
+    color: #fca5a5;
+  }
+}
+
+.subject-card__topic-delete:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.subject-card__footer {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 0.75rem;
+}
+
+.subject-card__delete-subject {
+  padding: 0.4rem 0.75rem;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #b91c1c;
+  background: transparent;
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.subject-card__delete-subject:hover {
+  background: rgba(239, 68, 68, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .subject-card__delete-subject {
+    color: #fca5a5;
+  }
+}
+
+.subject-card__delete-subject:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}

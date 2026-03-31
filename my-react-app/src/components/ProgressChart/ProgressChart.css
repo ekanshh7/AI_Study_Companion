@@ -1,0 +1,48 @@
+.progress-chart {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+@media (min-width: 960px) {
+  .progress-chart {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+}
+
+.progress-chart__panel {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem 1rem 0.75rem;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.progress-chart__title {
+  margin: 0 0 0.75rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-h);
+  text-align: left;
+}
+
+.progress-chart__empty {
+  margin: 0;
+  padding: 2rem 1rem;
+  text-align: center;
+  color: var(--text);
+}
+
+.progress-chart__legend-label {
+  color: var(--text);
+  font-size: 0.875rem;
+}
+
+.recharts-legend-item-text {
+  color: var(--text) !important;
+}

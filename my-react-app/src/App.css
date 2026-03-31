@@ -1,0 +1,18 @@
+.app-shell {
+  display: flex;
+  width: 100%;
+  min-height: 100svh;
+  text-align: left;
+}
+
+.app-main {
+  flex: 1;
+  min-width: 0;
+  padding: 1.5rem clamp(1rem, 3vw, 2.5rem);
+  box-sizing: border-box;
+}
+
+.app-main h1 {
+  margin-top: 0;
+  text-align: left;
+}
