@@ -1,16 +1,44 @@
-# React + Vite
+# AI Study Companion 📚🤖
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, comprehensive task management and study organization application designed specifically for students. This React-based platform helps learners track their subjects, manage daily academic tasks, schedule revisions, and leverage AI tools to enhance their study workflow. 
 
-Currently, two official plugins are available:
+The application emphasizes a seamless user experience with robust data persistence, dynamic filtering, and sorting capabilities to keep students organized and on track.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+* **🎛️ Interactive Dashboard:** Get a bird's-eye view of your overall study progress, upcoming deadlines, and recent activity.
+* **📂 Subject & Topic Management:** Organize your curriculum into specific subjects and break them down into manageable topics with varying difficulty levels.
+* **✅ Smart Task Tracking:** Manage assignments, readings, and lab reports with priority levels (High, Medium, Low) and statuses (Todo, In Progress, Done).
+* **🔄 Revision Scheduler:** Keep track of topics that need reviewing with dedicated revision dates to ensure long-term retention.
+* **🧠 AI Tools Integration:** Dedicated workspace to utilize AI-assisted study methods and services.
+* **💾 Local Data Persistence:** Never lose your work. Your subjects, topics, and tasks are automatically saved to your browser's local storage.
+* **🔔 Toast Notifications:** Real-time, non-intrusive alerts for successful actions, errors, and task updates.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+* **Frontend Framework:** React 18
+* **Build Tool:** Vite
+* **Routing:** React Router v6 (`react-router-dom`)
+* **State Management:** React Context API (`StudyContext`)
+* **Notifications:** React Toastify
+* **Styling:** Custom CSS (Modular App Shell architecture)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📂 Project Structure
+
+```text
+my-react-app/
+├── public/                 # Static assets (Favicon, SVG icons)
+├── src/
+│   ├── assets/             # Images and local SVGs
+│   ├── components/         # Reusable UI components (SidebarNav, TaskCard, SubjectCard, etc.)
+│   ├── context/            # Global state management (StudyContext.jsx)
+│   ├── hooks/              # Custom React hooks (useProgress, useDebounce, useTasks)
+│   ├── pages/              # Main route views (Dashboard, Subjects, Tasks, Revision, AITools)
+│   ├── services/           # External integrations (aiService.js)
+│   ├── utils/              # Helper functions (helpers.js, revisionFilters.js)
+│   ├── App.jsx             # Main application layout and routing
+│   ├── main.jsx            # Application entry point
+│   └── index.css           # Global styles and CSS variables
+├── index.html              # Base HTML template
+├── package.json            # Project metadata and dependencies
+└── vite.config.js          # Vite configuration
